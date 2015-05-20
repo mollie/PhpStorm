@@ -1,0 +1,18 @@
+![Mollie](https://www.mollie.nl/files/Mollie-Logo-Style-Small.png)
+
+# Mollie PhpStorm tools #
+
+### Features ###
+
+* Intention for converting "ClassName" to ClassName::class
+* Improved Smarty support:
+	* Suggest functions, constants and classes defined in PHP
+	* Suggest static methods and constants after a double colon
+	* Suggest variables used or defined in the Smarty file
+	* Suggest custom Smarty 'blocks', 'functions', and 'modifiers'
+	* Autocomplete Smarty blocks, like XML/HTML
+
+### Installation ###
+
+* Download [Mollie-PhpStorm.jar](https://github.com/mollie/PhpStorm/blob/master/jar/Mollie-PhpStorm.jar?raw)
+* Install via Preferences > Plugins > Install plugin from disk...

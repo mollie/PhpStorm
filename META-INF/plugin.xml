@@ -1,0 +1,63 @@
+<idea-plugin version="2">
+	<id>com.Mollie.PhpStormTools</id>
+	<name>Mollie PhpStorm tools</name>
+	<version>3</version>
+	<vendor email="info@mollie.com" url="http://www.mollie.com/">Mollie</vendor>
+
+	<depends>com.jetbrains.php</depends>
+	<depends>com.intellij.modules.platform</depends>
+	<depends>com.intellij.modules.lang</depends>
+
+	<description><![CDATA[
+        Mollie tools for phpStorm.
+
+        <ul>
+            <li>PHP 5.5 class name intention</li>
+            <li>
+                Improved Smarty support:
+                <ul>
+                    <li>Suggest PHP functions, constants and classes</li>
+                    <li>Suggest static methods and constants after a double colon (doesn't always work)</li>
+		            <li>Suggest variables used or defined in a Smarty file</li>
+		            <li>Suggest Smarty blocks, functions and modifiers</li>
+		            <li>Autocomplete Smarty block closing tags, like regular XML/HTML</li>
+                </ul>
+            </li>
+        </ul>
+    ]]></description>
+
+	<change-notes><![CDATA[
+        1 May, 2015 (version 3):
+        <ul>
+            <li>Have class name intention recognize namespaced class names.</li>
+            <li>Fix PhpStorm 9 compatibility issues.</li>
+        </ul>
+
+        30 April, 2015 (version 2):
+        <ul>
+            <li>Added various PHP and Smarty suggestions for Smarty files.</li>
+            <li>Autocomplete the closing tag of a Smarty block.</li>
+        </ul>
+
+		3 November, 2014 (version 1):
+		<ul>
+			<li>Added PHP 5.5 class name intention.</li>
+		</ul>
+    ]]></change-notes>
+
+	<idea-version since-build="131"/>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<completion.contributor language="Smarty" implementationClass="com.mollie.lang.SmartyCompletionContributor" />
+		<intentionAction>
+			<className>com.mollie.intention.PhpReplaceClassNameStringWithClassKeyword</className>
+			<category>PHP</category>
+		</intentionAction>
+	</extensions>
+
+	<application-components>
+		<component>
+			<implementation-class>com.mollie.editor.SmartyTypedActionHandlerComponent</implementation-class>
+		</component>
+	</application-components>
+</idea-plugin>

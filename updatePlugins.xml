@@ -1,0 +1,3 @@
+<plugins>
+	<plugin id="Mollie-PhpStorm" url="https://github.com/mollie/PhpStorm/blob/master/Mollie-PhpStorm.iml" />
+</plugins>
