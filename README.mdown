@@ -16,3 +16,7 @@
 
 * Download [Mollie-PhpStorm.jar](https://github.com/mollie/PhpStorm/blob/master/jar/Mollie-PhpStorm.jar?raw=true)
 * Install via Preferences > Plugins > Install plugin from disk...
+
+### License ###
+[BSD (Berkeley Software Distribution) License](http://www.opensource.org/licenses/bsd-license.php).
+Copyright (c) 2015, Mollie B.V.
